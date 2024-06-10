@@ -105,12 +105,12 @@ public class JokenpoGame1 extends Thread {
         } catch (NoSuchElementException e) {
             System.out.println("Um jogador desconectou.");
             if (!jogador1.isClosed()) {
-                jogador1out.println("O outro jogador desconectou. Você sera redirecionado para o menu.");
+                jogador1out.println("O outro jogador desconectou. Voce sera redirecionado para o menu.");
                 new Thread(new Menu(jogador1)).start();
                 
             }
             if (!jogador2.isClosed()) {
-                jogador2out.println("O outro jogador desconectou. Você sera redirecionado para o menu.");
+                jogador2out.println("O outro jogador desconectou. Voce sera redirecionado para o menu.");
                 new Thread(new Menu(jogador2)).start();
             }
             
