@@ -56,9 +56,6 @@ public class Cliente {
                 } else if(mensagem.contains("Escolha: Pedra(1), Papel(2) ou Tesoura(3)")){
                     String escolha = entrada.nextLine();
                     out.println(escolha);
-                }else if(mensagem.contains("Jogar Novamente? (Sim/Nao)")){
-                    String novo = entrada.nextLine();
-                    out.println(novo);
                 }
 
                 
