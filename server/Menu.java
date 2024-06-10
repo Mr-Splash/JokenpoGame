@@ -27,7 +27,7 @@ public class Menu extends Thread {
             String modoDeJogo = input.nextLine().trim();
 
             while (!modoDeJogo.equals("1") && !modoDeJogo.equals("2") && !modoDeJogo.equals("3")) {
-                output.println("Modo de jogo inválido. Escolha o modo de jogo: [1] PvP ou [2] PvE ou [3] Sair");
+                output.println("Modo de jogo invalido. Escolha o modo de jogo: [1] PvP ou [2] PvE ou [3] Sair");
                 modoDeJogo = input.nextLine().trim();
             }
 
