@@ -39,8 +39,8 @@ public class JokenpoGame1 extends Thread {
         int rodadas = 3;
 
         try {
-            jogador1out.println("Você é o jogador 1");
-            jogador2out.println("Você é o jogador 2");
+            jogador1out.println("Voce e o jogador 1");
+            jogador2out.println("Voce e o jogador 2");
             
             while (true) {
                 for (int i = 0; i < rodadas; i++) {
@@ -55,12 +55,12 @@ public class JokenpoGame1 extends Thread {
                     int result = Vencedor(j1escolha, j2escolha);
 
                     if (result == 1) {
-                        jogador1out.println("Você venceu! o jogador 2 escolheu " + j2escolha);
-                        jogador2out.println("Você perdeu! o jogador 1 escolheu " + j1escolha);
+                        jogador1out.println("Voce venceu! o jogador 2 escolheu " + j2escolha);
+                        jogador2out.println("Voce perdeu! o jogador 1 escolheu " + j1escolha);
                         jogador1Vitorias++;
                     } else if (result == -1) {
-                        jogador2out.println("Você venceu! o jogador 1 escolheu " + j1escolha);
-                        jogador1out.println("Você perdeu! o jogador 2 escolheu " + j2escolha);
+                        jogador2out.println("Voce venceu! o jogador 1 escolheu " + j1escolha);
+                        jogador1out.println("Voce perdeu! o jogador 2 escolheu " + j2escolha);
                         jogador2Vitorias++;
                     } else {
                         jogador1out.println("Empate! Ambos escolheram " + j1escolha);
@@ -68,8 +68,8 @@ public class JokenpoGame1 extends Thread {
                         empates++;
                     }
 
-                    jogador1out.println("Placar: Vitórias - " + jogador1Vitorias + " | Derrotas - " + jogador2Vitorias + " | Empates - " + empates);
-                    jogador2out.println("Placar: Vitórias - " + jogador2Vitorias + " | Derrotas - " + jogador1Vitorias + " | Empates - " + empates);
+                    jogador1out.println("Placar: Vitorias - " + jogador1Vitorias + " | Derrotas - " + jogador2Vitorias + " | Empates - " + empates);
+                    jogador2out.println("Placar: Vitorias - " + jogador2Vitorias + " | Derrotas - " + jogador1Vitorias + " | Empates - " + empates);
 
                     if (contador == rodadas) {
                         if (jogador1Vitorias > jogador2Vitorias) {
@@ -105,12 +105,12 @@ public class JokenpoGame1 extends Thread {
         } catch (NoSuchElementException e) {
             System.out.println("Um jogador desconectou.");
             if (!jogador1.isClosed()) {
-                jogador1out.println("O outro jogador desconectou. Você será redirecionado para o menu.");
+                jogador1out.println("O outro jogador desconectou. Você sera redirecionado para o menu.");
                 new Thread(new Menu(jogador1)).start();
                 
             }
             if (!jogador2.isClosed()) {
-                jogador2out.println("O outro jogador desconectou. Você será redirecionado para o menu.");
+                jogador2out.println("O outro jogador desconectou. Você sera redirecionado para o menu.");
                 new Thread(new Menu(jogador2)).start();
             }
             
@@ -141,7 +141,7 @@ public class JokenpoGame1 extends Thread {
         while (!escolha.equalsIgnoreCase("1") &&
                 !escolha.equalsIgnoreCase("2") &&
                 !escolha.equalsIgnoreCase("3")) {
-            out.println("Escolha inválida! Escolha: Pedra(1), Papel(2) ou Tesoura(3)");
+            out.println("Escolha invalida! Escolha: Pedra(1), Papel(2) ou Tesoura(3)");
             escolha = in.nextLine();
         }
         return converterEscolha(escolha);
