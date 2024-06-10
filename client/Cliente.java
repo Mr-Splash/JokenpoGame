@@ -19,7 +19,7 @@ public class Cliente {
 
         try {
           
-           System.out.println("Informe o IP do Servidor (IP padrão: " + ipServidor + ")");
+           System.out.println("Informe o IP do Servidor (IP padrao: " + ipServidor + ")");
            String ipServer = entrada.nextLine();
 
            if(ipServer.length() > 0) {
