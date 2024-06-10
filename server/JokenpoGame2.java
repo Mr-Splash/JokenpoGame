@@ -47,17 +47,17 @@ public class JokenpoGame2 extends Thread {
                     int result = Vencedor(j1escolha, servidorEscolha);
 
                     if (result == 1) {
-                        jogador1out.println("Você venceu! Servidor escolheu " + servidorEscolha);
+                        jogador1out.println("Voce venceu! Servidor escolheu " + servidorEscolha);
                         jogador1Vitorias++;
                     } else if (result == -1) {
-                        jogador1out.println("Você perdeu! Servidor escolheu " + servidorEscolha);
+                        jogador1out.println("Voce perdeu! Servidor escolheu " + servidorEscolha);
                         servidorVitorias++;
                     } else {
                         jogador1out.println("Empate! Ambos escolheram " + servidorEscolha);
                         draws++;
                     }
 
-                    jogador1out.println("Placar: Vitórias - " + jogador1Vitorias + ", Derrotas - " + servidorVitorias + ", Empates - " + draws);
+                    jogador1out.println("Placar: Vitorias - " + jogador1Vitorias + ", Derrotas - " + servidorVitorias + ", Empates - " + draws);
                 }
 
                     if (jogador1Vitorias > servidorVitorias) {
@@ -117,7 +117,7 @@ public class JokenpoGame2 extends Thread {
         while (!escolha.equalsIgnoreCase("1") &&
                 !escolha.equalsIgnoreCase("2") &&
                 !escolha.equalsIgnoreCase("3")) {
-            out.println("Escolha inválida! Escolha: Pedra(1), Papel(2) ou Tesoura(3)");
+            out.println("Escolha invalida! Escolha: Pedra(1), Papel(2) ou Tesoura(3)");
             escolha = in.nextLine();
         }
         return escolha;
